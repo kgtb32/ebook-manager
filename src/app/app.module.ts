@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { SidecarService } from './services/tauri/sidecar.service';
 
 
 
@@ -14,6 +15,9 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule,
     CommonModule,
     RouterModule
+  ],
+  providers: [
+    SidecarService
   ],
   bootstrap: [
     AppComponent

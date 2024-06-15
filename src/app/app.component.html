@@ -1,3 +1,16 @@
-<div>
-  <p>app</p>
-</div>
+@if(this.sidecarService.serviceLoaded && !this.sidecarService.err){
+  <div>
+    <p>app</p>
+  </div>
+}
+@else if (this.sidecarService.serviceLoaded && !!this.sidecarService.err) {
+  <div>
+    <p>err {{this.sidecarService.err}}</p>
+  </div>
+}
+@else {
+  <div>
+    loading
+  </div>
+}
+
