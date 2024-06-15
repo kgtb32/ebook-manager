@@ -26,6 +26,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "styles": [
+              "src/styles/index.scss"
+            ],
             "outputPath": "dist/ebook-manager",
             "index": "src/index.html",
             "browser": "src/main.ts",
