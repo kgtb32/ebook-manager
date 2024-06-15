@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { invoke } from "@tauri-apps/api/tauri";
+import { Command } from '@tauri-apps/api/shell';
 
 @Component({
   selector: 'app-root',
@@ -12,6 +13,15 @@ import { invoke } from "@tauri-apps/api/tauri";
 })
 export class AppComponent {
   greetingMessage = "";
+  stdout = ""
+  childInfo = ""
+
+  constructor() {
+    const command: Command = Command.sidecar("bin/build/backend");
+    command.execute().then(cmdOutput => {
+      this.stdout = cmdOutput.stdout + cmdOutput.stderr
+    }).catch(err => this.stdout = err);
+  }
 
   greet(event: SubmitEvent, name: string): void {
     event.preventDefault();
