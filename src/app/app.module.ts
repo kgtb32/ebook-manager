@@ -6,7 +6,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SidecarService } from './services/tauri/sidecar.service';
 import { routes } from './app.routing.module';
 import { HomePageModule } from './pages/home-page/home-page.module';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
 
 @NgModule({
@@ -15,6 +15,7 @@ import { HomePageModule } from './pages/home-page/home-page.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     CommonModule,
     RouterModule.forRoot(routes),
     HomePageModule

@@ -5,6 +5,11 @@
   "cli": {
     "analytics": false
   },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
+  },
   "projects": {
     "ebook-manager": {
       "projectType": "application",
