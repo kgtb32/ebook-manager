@@ -4,6 +4,8 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { SidecarService } from './services/tauri/sidecar.service';
+import { routes } from './app.routing.module';
+import { HomePageModule } from './pages/home-page/home-page.module';
 
 
 
@@ -14,7 +16,8 @@ import { SidecarService } from './services/tauri/sidecar.service';
   imports: [
     BrowserModule,
     CommonModule,
-    RouterModule
+    RouterModule.forRoot(routes),
+    HomePageModule
   ],
   providers: [
     SidecarService
