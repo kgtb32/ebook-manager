@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.github.kgtb32</groupId>
 	<artifactId>ebook-manager-backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<name>ebook-manager-backend</name>
 	<description>Demo project for Spring Boot</description>
 	<properties>
@@ -21,6 +21,27 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		<dependency>
+  			<groupId>org.apache.pdfbox</groupId>
+  			<artifactId>pdfbox</artifactId>
+  			<version>3.0.2</version>
+		</dependency>
+		<dependency>
+    		<groupId>org.apache.pdfbox</groupId>
+    		<artifactId>jbig2-imageio</artifactId>
+    		<version>3.0.4</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.github.jai-imageio</groupId>
+		    <artifactId>jai-imageio-jpeg2000</artifactId>
+		    <version>1.4.0</version>
+		</dependency>
+		<dependency>
+		    <groupId>com.twelvemonkeys.imageio</groupId>
+		    <artifactId>imageio-jpeg</artifactId>
+		    <version>3.11.0</version>
+		</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
