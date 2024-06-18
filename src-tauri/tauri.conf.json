@@ -11,6 +11,21 @@
   },
   "tauri": {
     "allowlist": {
+      "http": {
+        "all": true,
+        "request": true,
+        "scope": [
+          "http://localhost:8080"
+        ]
+      },
+      "dialog": {
+        "all": true,
+        "ask": false,
+        "confirm": false,
+        "message": false,
+        "open": false,
+        "save": false
+      },
       "all": false,
       "shell": {
         "sidecar": true,
