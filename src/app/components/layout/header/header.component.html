@@ -1,8 +1,9 @@
 <p-card styleClass="p-0 user-select-none">
     <div class="d-flex py-1">
+        <input type="file" id="fileUpload" hidden (change)="onOpenFile($event.target)" accept="application/pdf">
         <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-file-edit"></p-button>
         <div class="d-flex flex-1 flex-wrap overflow-x-auto justify-content-center">
-            <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-folder-open" />
+            <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-folder-open" (onClick)="loadFile()"/>
             <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-save"></p-button>
             <p-button class="mr-2" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-file-export"></p-button>
     
