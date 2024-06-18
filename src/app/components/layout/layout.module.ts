@@ -12,6 +12,7 @@ import { ListboxModule } from 'primeng/listbox';
 import { RadioButtonModule } from 'primeng/radiobutton'
 import { SelectButtonModule } from 'primeng/selectbutton'
 import { InputTextModule } from 'primeng/inputtext'
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { InputTextModule } from 'primeng/inputtext'
     RadioButtonModule,
     SelectButtonModule,
     InputTextModule,
+    HttpClientModule
   ],
   exports: [
     HeaderComponent,
