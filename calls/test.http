@@ -4,3 +4,8 @@ Content-Type: application/json
 {
     "fullPath": "/home/kevin/tmp/Comics.FR.-.Disney.-.La.grande.épopée.de.Picsou.-.01.-.La.jeunesse.de.Picsou..-.(Don.Rosa).-.[2008].pdf"
 }
+
+
+################
+
+GET http://localhost:8080/pdf/thumbnail?documentId=30c72d6e-b8be-4f4a-8e59-94a857b4c0f1&page=0 HTTP/1.1
