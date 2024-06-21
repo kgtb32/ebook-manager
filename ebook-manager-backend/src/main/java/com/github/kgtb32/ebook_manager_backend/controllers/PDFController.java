@@ -1,6 +1,13 @@
 package com.github.kgtb32.ebook_manager_backend.controllers;
 
+import java.awt.image.BufferedImage;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.http.converter.BufferedImageHttpMessageConverter;
+import org.springframework.http.converter.HttpMessageConverter;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,4 +31,21 @@ public class PDFController {
     public ResponseEntity<PDFInformation> loadPDF(@RequestParam("file") MultipartFile file){
         return ResponseEntity.ok(pdfService.loadPDF(file));
     }
+
+    @GetMapping(
+        value = "/thumbnail",
+        produces = MediaType.IMAGE_JPEG_VALUE
+    )
+    public ResponseEntity<BufferedImage> getPageThumbnail(
+        @RequestParam("documentId") String documentId,
+        @RequestParam("page") int page
+    ){
+        return ResponseEntity.ok(pdfService.pdfPageThumbnail(documentId, page));
+    }
+
+    @Bean
+    public HttpMessageConverter<BufferedImage> bufferedImageHttpMessageConverter() {
+        return new BufferedImageHttpMessageConverter();
+    }
+
 }

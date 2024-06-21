@@ -7,9 +7,9 @@
             <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-save"></p-button>
             <p-button class="mr-2" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-file-export"></p-button>
     
-            <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-chevron-left"></p-button>
-            <p-badge value="2/10" badgeSize="large" class="mr-1"/>
-            <p-button class="mr-2" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-chevron-right"></p-button>
+            <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-chevron-left" (onClick)="this.previous()"></p-button>
+            <p-badge value="{{pdfService.currentPage+1}}/{{pdfService.maxPages}}" badgeSize="large" class="mr-1"/>
+            <p-button class="mr-2" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-chevron-right" (onClick)="this.next()"></p-button>
 
             <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-search-minus"></p-button>
             <p-button class="mr-1" [outlined]="true" [raised]="true" [rounded]="true" icon="pi pi-search-plus"></p-button>
