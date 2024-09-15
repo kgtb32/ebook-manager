@@ -1,0 +1,10 @@
+@import 'cropperjs/dist/cropper.css';
+
+img {
+  border: 5px solid red;
+    display: block;
+  
+    /* This rule is very important, please don't ignore this */
+    max-width: 100%;
+    -webkit-user-drag: none;
+  }

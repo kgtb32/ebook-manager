@@ -6,15 +6,15 @@ import { Command } from '@tauri-apps/api/shell';
 })
 export class SidecarService {
   private readonly backendSidecar = "bin/build/backend"
-  command: Command
+  command?: Command
 
-  serviceLoaded: boolean = false
+  serviceLoaded: boolean = true
   err?: string
 
   constructor() {
-    this.command = Command.sidecar(this.backendSidecar);
-    this.command.execute().then(() => {
-      this.serviceLoaded = true
-    }).catch(err => this.err = err);
+    //this.command = Command.sidecar(this.backendSidecar);
+    //this.command.execute().then(() => {
+    //  this.serviceLoaded = true
+    //}).catch(err => this.err = err);
   }
 }

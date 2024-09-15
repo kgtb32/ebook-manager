@@ -3,7 +3,7 @@
     <div class="d-flex flex-1">
         <app-sidenav></app-sidenav>
         <div class="d-flex justify-content-center w-100">
-            <img [src]="this.image" alt="thumbnail"/>
+            <img id="image" class="user-select-none" [src]="this.image" alt="thumbnail" (click)="initCropper()"/>
         </div>
     </div>
 </div>
